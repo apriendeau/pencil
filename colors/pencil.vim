@@ -156,13 +156,13 @@ function! s:h(group, style)
     unlet a:style.cterm
   endif
   execute "highlight" a:group
-    \ "guifg="	 (has_key(a:style, "fg")	? a:style.fg.gui   : "NONE")
-    \ "guibg="	 (has_key(a:style, "bg")	? a:style.bg.gui   : "NONE")
-    \ "guisp="	 (has_key(a:style, "sp")	? a:style.sp.gui   : "NONE")
-    \ "gui="	 (has_key(a:style, "gui")	? a:style.gui	   : "NONE")
+    \ "guifg="   (has_key(a:style, "fg")	? a:style.fg.gui   : "NONE")
+    \ "guibg="   (has_key(a:style, "bg")	? a:style.bg.gui   : "NONE")
+    \ "guisp="   (has_key(a:style, "sp")	? a:style.sp.gui   : "NONE")
+    \ "gui="     (has_key(a:style, "gui")	? a:style.gui	   : "NONE")
     \ "ctermfg=" (has_key(a:style, "fg")	? a:style.fg.cterm : "NONE")
     \ "ctermbg=" (has_key(a:style, "bg")	? a:style.bg.cterm : "NONE")
-    \ "cterm="	 (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
+    \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
 " common groups ================================================================
@@ -173,28 +173,28 @@ call s:h("Cursor",   {"bg": s:blue, "fg": s:norm })
 call s:h("Comment",  {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:cyan})
-hi! link String			  Constant
-hi! link Character		  Constant
-hi! link Number			  Constant
-hi! link Boolean		  Constant
-hi! link Float			  Constant
+hi! link String           Constant
+hi! link Character        Constant
+hi! link Number           Constant
+hi! link Boolean          Constant
+hi! link Float            Constant
 
 call s:h("Identifier",    {"fg": s:dark_blue})
-hi! link Function		  Identifier
+hi! link Function         Identifier
 
 call s:h("Statement",     {"fg": s:green})
-hi! link Conditonal		  Statement
-hi! link Repeat			  Statement
-hi! link Label			  Statement
-hi! link Operator		  Statement
-hi! link Keyword		  Statement
-hi! link Exception		  Statement
+hi! link Conditonal       Statement
+hi! link Repeat           Statement
+hi! link Label            Statement
+hi! link Operator         Statement
+hi! link Keyword          Statement
+hi! link Exception        Statement
 
 call s:h("PreProc",       {"fg": s:red})
-hi! link Include		  PreProc
-hi! link Define			  PreProc
-hi! link Macro			  PreProc
-hi! link PreCondit		  PreProc
+hi! link Include          PreProc
+hi! link Define           PreProc
+hi! link Macro            PreProc
+hi! link PreCondit        PreProc
 
 call s:h("Type",          {"fg": s:purple})
 hi! link StorageClass     Type
