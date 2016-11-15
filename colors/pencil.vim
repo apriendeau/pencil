@@ -301,7 +301,7 @@ call s:h("markdownEscape",              {"fg": s:norm                           
 call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"	})
 call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold",        "cterm": "bold"	})
 call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic",      "cterm": "italic"})
-call s:h("markdownH4",					{"fg": s:head_a, "gui": "italic",      "cterm": "italic"})
+call s:h("markdownH4",                  {"fg": s:head_a, "gui": "italic",      "cterm": "italic"})
 call s:h("markdownH5",                  {"fg": s:head_a})
 call s:h("markdownH6",                  {"fg": s:head_a})
 call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
