@@ -144,9 +144,9 @@ else
 endif
 
 if g:pencil_spell_undercurl == 1
-  let s:sp_un	   = 'undercurl'
+  let s:sp_un          = 'undercurl'
 else
-  let s:sp_un	   = 'underline'
+  let s:sp_un          = 'underline'
 endif
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
@@ -172,17 +172,17 @@ call s:h("Normal",   {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",   {"bg": s:blue, "fg": s:norm })
 call s:h("Comment",  {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
-call s:h("Constant", {"fg": s:cyan})
+call s:h("Constant",      {"fg": s:cyan})
 hi! link String			  Constant
 hi! link Character		  Constant
 hi! link Number			  Constant
 hi! link Boolean		  Constant
 hi! link Float			  Constant
 
-call s:h("Identifier", {"fg": s:dark_blue})
+call s:h("Identifier",    {"fg": s:dark_blue})
 hi! link Function		  Identifier
 
-call s:h("Statement", {"fg": s:green})
+call s:h("Statement",     {"fg": s:green})
 hi! link Conditonal		  Statement
 hi! link Repeat			  Statement
 hi! link Label			  Statement
@@ -190,18 +190,18 @@ hi! link Operator		  Statement
 hi! link Keyword		  Statement
 hi! link Exception		  Statement
 
-call s:h("PreProc",		  {"fg": s:red})
+call s:h("PreProc",       {"fg": s:red})
 hi! link Include		  PreProc
 hi! link Define			  PreProc
 hi! link Macro			  PreProc
 hi! link PreCondit		  PreProc
 
-call s:h("Type",		  {"fg": s:purple})
+call s:h("Type",          {"fg": s:purple})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-call s:h("Special",		  {"fg": s:pink})
+call s:h("Special",       {"fg": s:pink})
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
@@ -282,9 +282,9 @@ hi! link htmlTagN         Keyword
 
 " HTML content
 call s:h("htmlH1",         {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"   })
-call s:h("htmlH2",         {"fg": s:head_a, "gui": "bold"	   , "cterm": "bold"    })
-call s:h("htmlH3",         {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic"  })
-call s:h("htmlH4",         {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic"  })
+call s:h("htmlH2",         {"fg": s:head_a, "gui": "bold",       "cterm": "bold"    })
+call s:h("htmlH3",         {"fg": s:head_b, "gui": "italic",     "cterm": "italic"  })
+call s:h("htmlH4",         {"fg": s:head_b, "gui": "italic",     "cterm": "italic"  })
 call s:h("htmlH5",         {"fg": s:head_c                                          })
 call s:h("htmlH6",         {"fg": s:head_c                                          })
 call s:h("htmlLink",       {"fg": s:blue , "gui": "underline", "cterm": "underline" })
