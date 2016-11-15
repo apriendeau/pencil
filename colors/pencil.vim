@@ -63,45 +63,45 @@ if ! exists("g:pencil_gutter_color")
 endif
 
 " Colors
-let s:black			  = { "gui": "#121212", "cterm": "0"   }
-let s:medium_gray	  = { "gui": "#767676", "cterm": "243" }
-let s:white			  = { "gui": "#F1F1F1", "cterm": "15"  }
-let s:actual_white	  = { "gui": "#FFFFFF", "cterm": "231" }
-let s:light_black	  = { "gui": "#424242", "cterm": "8"   }
+let s:black           = { "gui": "#121212", "cterm": "0"   }
+let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
+let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
+let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
+let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 
 if g:pencil_higher_contrast_ui == 0
   " darker shadow and whiter grays
   let s:subtle_black  = { "gui": "#262626", "cterm": "235" }
-  let s:light_gray	  = { "gui": "#D9D9D9", "cterm": "253" }
+  let s:light_gray    = { "gui": "#D9D9D9", "cterm": "253" }
   let s:lighter_gray  = { "gui": "#E5E6E6", "cterm": "254" }
 else
   " lighter shadows and darker grays
   let s:subtle_black  = { "gui": "#303030", "cterm": "236" }
-  let s:light_gray	  = { "gui": "#B2B2B2", "cterm": "249" }
+  let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249" }
   let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251" }
 endif
 
-let s:pink			  = { "gui": "#fb007a", "cterm": "9"   }
-let s:dark_red		  = { "gui": "#C30771", "cterm": "1"   }
-let s:light_red		  = { "gui": "#E32791", "cterm": "1"   }
-let s:orange		  = { "gui": "#D75F5F", "cterm": "167" }
+let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
+let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
+let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
+let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
 
-let s:darker_blue	  = { "gui": "#00afdf", "cterm": "38" }
-let s:dark_blue		  = { "gui": "#00afff", "cterm": "39" }
-let s:blue			  = { "gui": "#00dfff", "cterm": "39" }
-let s:light_blue	  = { "gui": "#00dfff", "cterm": "45" }
-let s:dark_cyan		  = { "gui": "#00afdf", "cterm": "38"  }
-let s:light_cyan	  = { "gui": "#00dfff", "cterm": "45" }
+let s:darker_blue     = { "gui": "#00afdf", "cterm": "38"  }
+let s:dark_blue       = { "gui": "#00afff", "cterm": "39"  }
+let s:blue            = { "gui": "#00dfff", "cterm": "39"  }
+let s:light_blue      = { "gui": "#00dfff", "cterm": "45"  }
+let s:dark_cyan       = { "gui": "#00afdf", "cterm": "38"  }
+let s:light_cyan      = { "gui": "#00dfff", "cterm": "45"  }
 
-let s:dark_green	  = { "gui": "#00df5f", "cterm": "41"	}
-let s:light_green	  = { "gui": "#00ff87", "cterm": "48"  }
+let s:dark_green      = { "gui": "#00df5f", "cterm": "41"  }
+let s:light_green     = { "gui": "#00ff87", "cterm": "48"  }
 
-let s:dark_purple	  = { "gui": "#875fdf", "cterm": "98"	}
-let s:light_purple	  = { "gui": "#af5fff", "cterm": "135"	}
+let s:dark_purple     = { "gui": "#875fdf", "cterm": "98"  }
+let s:light_purple    = { "gui": "#af5fff", "cterm": "135" }
 
-let s:yellow		  = { "gui": "#F3E430", "cterm": "11"  }
-let s:dark_yellow	  = { "gui": "#A89C14", "cterm": "3"   }
+let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
+let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
   let s:bg              = s:black
@@ -168,21 +168,21 @@ endfunction
 " common groups ================================================================
 " (see `:h w18`)
 
-call s:h("Normal",		  {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",		  {"bg": s:blue, "fg": s:norm })
-call s:h("Comment",		  {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
+call s:h("Normal",   {"bg": s:bg, "fg": s:norm})
+call s:h("Cursor",   {"bg": s:blue, "fg": s:norm })
+call s:h("Comment",  {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
-call s:h("Constant",	  {"fg": s:cyan})
+call s:h("Constant", {"fg": s:cyan})
 hi! link String			  Constant
 hi! link Character		  Constant
 hi! link Number			  Constant
 hi! link Boolean		  Constant
 hi! link Float			  Constant
 
-call s:h("Identifier",	  {"fg": s:dark_blue})
+call s:h("Identifier", {"fg": s:dark_blue})
 hi! link Function		  Identifier
 
-call s:h("Statement",	  {"fg": s:green})
+call s:h("Statement", {"fg": s:green})
 hi! link Conditonal		  Statement
 hi! link Repeat			  Statement
 hi! link Label			  Statement
@@ -197,21 +197,21 @@ hi! link Macro			  PreProc
 hi! link PreCondit		  PreProc
 
 call s:h("Type",		  {"fg": s:purple})
-hi! link StorageClass	  Type
-hi! link Structure		  Type
-hi! link Typedef		  Type
+hi! link StorageClass     Type
+hi! link Structure        Type
+hi! link Typedef          Type
 
 call s:h("Special",		  {"fg": s:pink})
-hi! link SpecialChar	  Special
-hi! link Tag			  Special
-hi! link Delimiter		  Special
+hi! link SpecialChar      Special
+hi! link Tag              Special
+hi! link Delimiter        Special
 hi! link SpecialComment   Special
-hi! link Debug			  Special
+hi! link Debug            Special
 
-call s:h("Underlined",	  {"fg": s:norm , "gui": "underline", "cterm": "underline"            })
-call s:h("Ignore",		  {"fg": s:bg                                                         })
-call s:h("Error",		  {"fg": s:actual_white, "bg": s:red , "gui": "bold", "cterm": "bold" })
-call s:h("Todo",		  {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold" })
+call s:h("Underlined",    {"fg": s:norm , "gui": "underline", "cterm": "underline"            })
+call s:h("Ignore",        {"fg": s:bg                                                         })
+call s:h("Error",         {"fg": s:actual_white, "bg": s:red , "gui": "bold", "cterm": "bold" })
+call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold" })
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
@@ -273,90 +273,90 @@ call s:h("qfLineNr",    {"fg": s:medium_gray})
 " hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
 
 " HTML syntax
-hi! link htmlTag		  Special
-hi! link htmlEndTag		  htmlTag
+hi! link htmlTag          Special
+hi! link htmlEndTag       htmlTag
 
-hi! link htmlTagName	  KeyWord
+hi! link htmlTagName      KeyWord
 " html5 tags show up as htmlTagN
-hi! link htmlTagN		  Keyword
+hi! link htmlTagN         Keyword
 
 " HTML content
-call s:h("htmlH1",		  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"   })
-call s:h("htmlH2",		  {"fg": s:head_a, "gui": "bold"	   , "cterm": "bold"   })
-call s:h("htmlH3",		  {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic" })
-call s:h("htmlH4",		  {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic" })
-call s:h("htmlH5",		  {"fg": s:head_c                                          })
-call s:h("htmlH6",		  {"fg": s:head_c                                          })
-call s:h("htmlLink",	  {"fg": s:blue , "gui": "underline", "cterm": "underline" })
-call s:h("htmlItalic",	  {"gui": "italic", "cterm": "italic"	                   })
-call s:h("htmlBold",	  {"gui": "bold", "cterm": "bold"                          })
-call s:h("htmlBoldItalic",{"gui": "bold,italic", "cterm": "bold"                   })
+call s:h("htmlH1",         {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"   })
+call s:h("htmlH2",         {"fg": s:head_a, "gui": "bold"	   , "cterm": "bold"    })
+call s:h("htmlH3",         {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic"  })
+call s:h("htmlH4",         {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic"  })
+call s:h("htmlH5",         {"fg": s:head_c                                          })
+call s:h("htmlH6",         {"fg": s:head_c                                          })
+call s:h("htmlLink",       {"fg": s:blue , "gui": "underline", "cterm": "underline" })
+call s:h("htmlItalic",     {"gui": "italic", "cterm": "italic"                      })
+call s:h("htmlBold",       {"gui": "bold", "cterm": "bold"                          })
+call s:h("htmlBoldItalic", {"gui": "bold,italic", "cterm": "bold"                   })
 " hi htmlString		guifg=#87875f guibg=NONE gui=NONE		 ctermfg=101 ctermbg=NONE cterm=NONE
 
 " tpope/vim-markdown
-call s:h("markdownBlockquote",			{"fg": s:norm})
-call s:h("markdownBold",				{"fg": s:norm  , "gui": "bold"		 , "cterm": "bold"	})
-call s:h("markdownBoldItalic",			{"fg": s:norm  , "gui": "bold,italic", "cterm": "bold"	})
-call s:h("markdownEscape",				{"fg": s:norm})
-call s:h("markdownH1",					{"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"	})
-call s:h("markdownH2",					{"fg": s:head_a, "gui": "bold"		 , "cterm": "bold"	})
-call s:h("markdownH3",					{"fg": s:head_a, "gui": "italic"	 , "cterm": "italic"})
-call s:h("markdownH4",					{"fg": s:head_a, "gui": "italic"	 , "cterm": "italic"})
-call s:h("markdownH5",					{"fg": s:head_a})
-call s:h("markdownH6",					{"fg": s:head_a})
-call s:h("markdownHeadingDelimiter",	{"fg": s:norm})
-call s:h("markdownHeadingRule",			{"fg": s:norm})
-call s:h("markdownId",					{"fg": s:medium_gray})
-call s:h("markdownIdDeclaration",		{"fg": s:norm_subtle})
-call s:h("markdownItalic",				{"fg": s:norm  , "gui": "italic"	 , "cterm": "italic"})
-call s:h("markdownLinkDelimiter",		{"fg": s:medium_gray})
-call s:h("markdownLinkText",			{"fg": s:norm})
-call s:h("markdownLinkTextDelimiter",	{"fg": s:medium_gray})
-call s:h("markdownListMarker",			{"fg": s:norm})
-call s:h("markdownOrderedListMarker",	{"fg": s:norm})
-call s:h("markdownRule",				{"fg": s:norm})
-call s:h("markdownUrl",					{"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
-call s:h("markdownUrlDelimiter",		{"fg": s:medium_gray})
-call s:h("markdownUrlTitle",			{"fg": s:norm})
-call s:h("markdownUrlTitleDelimiter",	{"fg": s:medium_gray})
-call s:h("markdownCode",				{"fg": s:norm, "bg": s:code_bg})
-call s:h("markdownCodeDelimiter",		{"fg": s:norm, "bg": s:code_bg})
+call s:h("markdownBlockquote",          {"fg": s:norm                                           })
+call s:h("markdownBold",                {"fg": s:norm, "gui": "bold",        "cterm": "bold"	})
+call s:h("markdownBoldItalic",          {"fg": s:norm, "gui": "bold,italic", "cterm": "bold"	})
+call s:h("markdownEscape",              {"fg": s:norm                                           })
+call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"	})
+call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold",        "cterm": "bold"	})
+call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic",      "cterm": "italic"})
+call s:h("markdownH4",					{"fg": s:head_a, "gui": "italic",      "cterm": "italic"})
+call s:h("markdownH5",                  {"fg": s:head_a})
+call s:h("markdownH6",                  {"fg": s:head_a})
+call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
+call s:h("markdownHeadingRule",         {"fg": s:norm})
+call s:h("markdownId",                  {"fg": s:medium_gray})
+call s:h("markdownIdDeclaration",       {"fg": s:norm_subtle})
+call s:h("markdownItalic",              {"fg": s:norm, "gui": "italic", "cterm": "italic"})
+call s:h("markdownLinkDelimiter",       {"fg": s:medium_gray})
+call s:h("markdownLinkText",            {"fg": s:norm})
+call s:h("markdownLinkTextDelimiter",   {"fg": s:medium_gray})
+call s:h("markdownListMarker",          {"fg": s:norm})
+call s:h("markdownOrderedListMarker",   {"fg": s:norm})
+call s:h("markdownRule",                {"fg": s:norm})
+call s:h("markdownUrl",                 {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
+call s:h("markdownUrlDelimiter",        {"fg": s:medium_gray})
+call s:h("markdownUrlTitle",            {"fg": s:norm})
+call s:h("markdownUrlTitleDelimiter",   {"fg": s:medium_gray})
+call s:h("markdownCode",                {"fg": s:norm, "bg": s:code_bg})
+call s:h("markdownCodeDelimiter",       {"fg": s:norm, "bg": s:code_bg})
 
 " plasticboy/vim-markdown
-call s:h("mkdBlockQuote",				{"fg": s:norm})
-call s:h("mkdDelimiter",				{"fg": s:medium_gray})
-call s:h("mkdID",						{"fg": s:medium_gray})
-call s:h("mkdLineContinue",				{"fg": s:norm})
-call s:h("mkdLink",						{"fg": s:norm})
-call s:h("mkdLinkDef",					{"fg": s:medium_gray})
-call s:h("mkdListItem",					{"fg": s:norm})
-call s:h("mkdNonListItemBlock",			{"fg": s:norm})  " bug in syntax?
-call s:h("mkdRule",						{"fg": s:norm})
-call s:h("mkdUrl",						{"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
-call s:h("mkdCode",						{"fg": s:norm, "bg": s:code_bg})
-call s:h("mkdIndentCode",				{"fg": s:norm, "bg": s:code_bg})
+call s:h("mkdBlockQuote",               {"fg": s:norm})
+call s:h("mkdDelimiter",                {"fg": s:medium_gray})
+call s:h("mkdID",                       {"fg": s:medium_gray})
+call s:h("mkdLineContinue",             {"fg": s:norm})
+call s:h("mkdLink",                     {"fg": s:norm})
+call s:h("mkdLinkDef",                  {"fg": s:medium_gray})
+call s:h("mkdListItem",                 {"fg": s:norm})
+call s:h("mkdNonListItemBlock",	        {"fg": s:norm})  " bug in syntax?
+call s:h("mkdRule",                     {"fg": s:norm})
+call s:h("mkdUrl",                      {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
+call s:h("mkdCode",                     {"fg": s:norm, "bg": s:code_bg})
+call s:h("mkdIndentCode",               {"fg": s:norm, "bg": s:code_bg})
 
 " gabrielelana/vim-markdown
 call s:h("markdownBlockquoteDelimiter", {"fg": s:norm})
-call s:h("markdownInlineDelimiter",		{"fg": s:norm})
-call s:h("markdownItemDelimiter",		{"fg": s:norm})
-call s:h("markdownLinkReference",		{"fg": s:medium_gray})
-call s:h("markdownLinkText",			{"fg": s:norm})
-call s:h("markdownLinkTextContainer",	{"fg": s:medium_gray})
-call s:h("markdownLinkUrl",				{"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
-call s:h("markdownLinkUrlContainer",	{"fg": s:medium_gray})
-call s:h("markdownFencedCodeBlock",		{"fg": s:norm, "bg": s:code_bg})
-call s:h("markdownInlineCode",			{"fg": s:norm, "bg": s:code_bg})
+call s:h("markdownInlineDelimiter",     {"fg": s:norm})
+call s:h("markdownItemDelimiter",       {"fg": s:norm})
+call s:h("markdownLinkReference",       {"fg": s:medium_gray})
+call s:h("markdownLinkText",            {"fg": s:norm})
+call s:h("markdownLinkTextContainer",   {"fg": s:medium_gray})
+call s:h("markdownLinkUrl",             {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
+call s:h("markdownLinkUrlContainer",    {"fg": s:medium_gray})
+call s:h("markdownFencedCodeBlock",     {"fg": s:norm, "bg": s:code_bg})
+call s:h("markdownInlineCode",          {"fg": s:norm, "bg": s:code_bg})
 
 " mattly/vim-markdown-enhancements
-call s:h("mmdFootnoteDelimiter",		{"fg": s:medium_gray})
-call s:h("mmdFootnoteMarker",			{"fg": s:norm})
-call s:h("mmdTableAlign",				{"fg": s:norm})
-call s:h("mmdTableDelimiter",			{"fg": s:norm})
-call s:h("mmdTableHeadDelimiter",		{"fg": s:norm})
-call s:h("mmdTableHeader",				{"fg": s:norm})
-call s:h("mmdTableCaptionDelimiter",	{"fg": s:norm})
-call s:h("mmdTableCaption",				{"fg": s:norm})
+call s:h("mmdFootnoteDelimiter",        {"fg": s:medium_gray})
+call s:h("mmdFootnoteMarker",           {"fg": s:norm})
+call s:h("mmdTableAlign",               {"fg": s:norm})
+call s:h("mmdTableDelimiter",           {"fg": s:norm})
+call s:h("mmdTableHeadDelimiter",       {"fg": s:norm})
+call s:h("mmdTableHeader",              {"fg": s:norm})
+call s:h("mmdTableCaptionDelimiter",    {"fg": s:norm})
+call s:h("mmdTableCaption",             {"fg": s:norm})
 
 " Textile content
 " https://github.com/timcharper/textile.vim/blob/master/syntax/textile.vim
@@ -364,25 +364,25 @@ call s:h("mmdTableCaption",				{"fg": s:norm})
 "call s:h("txtEmphasis",			{"fg": s:norm  , "gui": "italic"	 , "cterm": "italic"})
 
 " XML content
-hi! link xmlTag						htmlTag
-hi! link xmlEndTag					xmlTag
-hi! link xmlTagName					htmlTagName
+hi! link xmlTag                    htmlTag
+hi! link xmlEndTag                 xmlTag
+hi! link xmlTagName                htmlTagName
 
 " Signify, git-gutter
 if g:pencil_gutter_color == 1
-  hi link SignifySignAdd			  DiffAdd
-  hi link SignifySignDelete			  DiffDelete
-  hi link SignifySignChange			  DiffChange
-  hi link GitGutterAdd				  DiffAdd
-  hi link GitGutterDelete			  DiffDelete
-  hi link GitGutterChange			  DiffChange
-  hi link GitGutterChangeDelete		  DiffChange
+  hi link SignifySignAdd           DiffAdd
+  hi link SignifySignDelete        DiffDelete
+  hi link SignifySignChange        DiffChange
+  hi link GitGutterAdd             DiffAdd
+  hi link GitGutterDelete          DiffDelete
+  hi link GitGutterChange          DiffChange
+  hi link GitGutterChangeDelete    DiffChange
 else
-  hi link SignifySignAdd			  LineNr
-  hi link SignifySignDelete			  LineNr
-  hi link SignifySignChange			  LineNr
-  hi link GitGutterAdd				  LineNr
-  hi link GitGutterDelete			  LineNr
-  hi link GitGutterChange			  LineNr
-  hi link GitGutterChangeDelete		  LineNr
+  hi link SignifySignAdd           LineNr
+  hi link SignifySignDelete        LineNr
+  hi link SignifySignChange        LineNr
+  hi link GitGutterAdd             LineNr
+  hi link GitGutterDelete          LineNr
+  hi link GitGutterChange          LineNr
+  hi link GitGutterChangeDelete    LineNr
 endif
