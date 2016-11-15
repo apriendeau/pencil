@@ -32,7 +32,7 @@
 hi clear
 
 if exists('syntax on')
-	syntax reset
+  syntax reset
 endif
 
 let g:colors_name='pencil'
@@ -94,11 +94,11 @@ let s:light_blue	  = { "gui": "#00dfff", "cterm": "45" }
 let s:dark_cyan		  = { "gui": "#00afdf", "cterm": "38"  }
 let s:light_cyan	  = { "gui": "#00dfff", "cterm": "45" }
 
-let s:dark_green	  = { "gui": "#00df5f", "cterm": "41"   }
+let s:dark_green	  = { "gui": "#00df5f", "cterm": "41"	}
 let s:light_green	  = { "gui": "#00ff87", "cterm": "48"  }
 
-let s:dark_purple	  = { "gui": "#875fdf", "cterm": "98"   }
-let s:light_purple	  = { "gui": "#af5fff", "cterm": "135"  }
+let s:dark_purple	  = { "gui": "#875fdf", "cterm": "98"	}
+let s:light_purple	  = { "gui": "#af5fff", "cterm": "135"	}
 
 let s:yellow		  = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow	  = { "gui": "#A89C14", "cterm": "3"   }
@@ -153,16 +153,16 @@ endif
 function! s:h(group, style)
   " Not all terminals support italics properly. If yours does, opt-in.
   if g:pencil_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
-	unlet a:style.cterm
+    unlet a:style.cterm
   endif
   execute "highlight" a:group
-	\ "guifg="	 (has_key(a:style, "fg")	? a:style.fg.gui   : "NONE")
-	\ "guibg="	 (has_key(a:style, "bg")	? a:style.bg.gui   : "NONE")
-	\ "guisp="	 (has_key(a:style, "sp")	? a:style.sp.gui   : "NONE")
-	\ "gui="	 (has_key(a:style, "gui")	? a:style.gui	   : "NONE")
-	\ "ctermfg=" (has_key(a:style, "fg")	? a:style.fg.cterm : "NONE")
-	\ "ctermbg=" (has_key(a:style, "bg")	? a:style.bg.cterm : "NONE")
-	\ "cterm="	 (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
+    \ "guifg="	 (has_key(a:style, "fg")	? a:style.fg.gui   : "NONE")
+    \ "guibg="	 (has_key(a:style, "bg")	? a:style.bg.gui   : "NONE")
+    \ "guisp="	 (has_key(a:style, "sp")	? a:style.sp.gui   : "NONE")
+    \ "gui="	 (has_key(a:style, "gui")	? a:style.gui	   : "NONE")
+    \ "ctermfg=" (has_key(a:style, "fg")	? a:style.fg.cterm : "NONE")
+    \ "ctermbg=" (has_key(a:style, "bg")	? a:style.bg.cterm : "NONE")
+    \ "cterm="	 (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
 " common groups ================================================================
