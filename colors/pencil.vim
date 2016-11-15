@@ -105,26 +105,26 @@ let s:dark_yellow	  = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
   let s:bg              = s:black
-  let s:bg_subtle		= s:light_black
+  let s:bg_subtle       = s:light_black
   let s:bg_very_subtle	= s:subtle_black
-  let s:norm			= s:lighter_gray
-  let s:norm_subtle		= s:light_gray
-  let s:purple			= s:light_purple
-  let s:cyan			= s:light_cyan
-  let s:green			= s:light_green
-  let s:red				= s:light_red
-  let s:visual			= s:lighter_black
+  let s:norm            = s:lighter_gray
+  let s:norm_subtle     = s:light_gray
+  let s:purple          = s:light_purple
+  let s:cyan            = s:light_cyan
+  let s:green           = s:light_green
+  let s:red             = s:light_red
+  let s:visual          = s:lighter_black
 else
-  let s:bg				= s:white
-  let s:bg_subtle		= s:light_gray
-  let s:bg_very_subtle	= s:lighter_gray
-  let s:norm			= s:light_black
-  let s:norm_subtle		= s:lighter_black
-  let s:purple			= s:dark_purple
-  let s:cyan			= s:dark_cyan
-  let s:green			= s:dark_green
-  let s:red				= s:dark_red
-  let s:visual			= s:light_blue
+  let s:bg              = s:white
+  let s:bg_subtle       = s:light_gray
+  let s:bg_very_subtle  = s:lighter_gray
+  let s:norm            = s:light_black
+  let s:norm_subtle     = s:lighter_black
+  let s:purple          = s:dark_purple
+  let s:cyan            = s:dark_cyan
+  let s:green           = s:dark_green
+  let s:red             = s:dark_red
+  let s:visual          = s:light_blue
 endif
 
 if g:pencil_neutral_headings == 1
@@ -208,67 +208,67 @@ hi! link Delimiter		  Special
 hi! link SpecialComment   Special
 hi! link Debug			  Special
 
-call s:h("Underlined",	  {"fg": s:norm						 , "gui": "underline", "cterm": "underline"})
-call s:h("Ignore",		  {"fg": s:bg																   })
-call s:h("Error",		  {"fg": s:actual_white, "bg": s:red , "gui": "bold"	 , "cterm": "bold"	   })
-call s:h("Todo",		  {"fg": s:actual_white, "bg": s:pink, "gui": "bold"	 , "cterm": "bold"	   })
+call s:h("Underlined",	  {"fg": s:norm , "gui": "underline", "cterm": "underline"            })
+call s:h("Ignore",		  {"fg": s:bg                                                         })
+call s:h("Error",		  {"fg": s:actual_white, "bg": s:red , "gui": "bold", "cterm": "bold" })
+call s:h("Todo",		  {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold" })
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
 
-call s:h("SpecialKey",	  {"fg": s:light_green})
-call s:h("NonText",		  {"fg": s:bg_subtle})
-call s:h("Directory",	  {"fg": s:blue})
-call s:h("ErrorMsg",	  {"fg": s:pink})
-call s:h("IncSearch",	  {"bg": s:yellow, "fg": s:light_black})
-call s:h("Search",		  {"bg": s:bg_subtle})
-call s:h("MoreMsg",		  {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
+call s:h("SpecialKey",    {"fg": s:light_green})
+call s:h("NonText",       {"fg": s:bg_subtle})
+call s:h("Directory",     {"fg": s:blue})
+call s:h("ErrorMsg",      {"fg": s:pink})
+call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
+call s:h("Search",        {"bg": s:bg_subtle})
+call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",		  {"fg": s:bg_subtle})
+call s:h("LineNr",        {"fg": s:bg_subtle})
 call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
-call s:h("Question",	  {"fg": s:red})
-call s:h("StatusLine",	  {"bg": s:bg_very_subtle})
-call s:h("Conceal",		  {"fg": s:norm})
+call s:h("Question",      {"fg": s:red})
+call s:h("StatusLine",    {"bg": s:bg_very_subtle})
+call s:h("Conceal",       {"fg": s:norm})
 call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
-call s:h("VertSplit",	  {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
-call s:h("Title",		  {"fg": s:dark_blue})
-call s:h("Visual",		  {"bg": s:visual})
-call s:h("VisualNOS",	  {"bg": s:bg_subtle})
-call s:h("WarningMsg",	  {"fg": s:red})
-call s:h("WildMenu",	  {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",		  {"fg": s:medium_gray})
-call s:h("FoldColumn",	  {"fg": s:bg_subtle})
-call s:h("DiffAdd",		  {"fg": s:green})
-call s:h("DiffDelete",	  {"fg": s:red})
-call s:h("DiffChange",	  {"fg": s:dark_yellow})
-call s:h("DiffText",	  {"fg": s:dark_blue})
-call s:h("SignColumn",	  {"fg": s:light_green})
+call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
+call s:h("Title",         {"fg": s:dark_blue})
+call s:h("Visual",        {"bg": s:visual})
+call s:h("VisualNOS",     {"bg": s:bg_subtle})
+call s:h("WarningMsg",    {"fg": s:red})
+call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
+call s:h("Folded",        {"fg": s:medium_gray})
+call s:h("FoldColumn",    {"fg": s:bg_subtle})
+call s:h("DiffAdd",       {"fg": s:green})
+call s:h("DiffDelete",    {"fg": s:red})
+call s:h("DiffChange",    {"fg": s:dark_yellow})
+call s:h("DiffText",      {"fg": s:dark_blue})
+call s:h("SignColumn",    {"fg": s:light_green})
 
 if has("gui_running")
-  call s:h("SpellBad",	  {"gui": s:sp_un, "sp": s:red})
-  call s:h("SpellCap",	  {"gui": s:sp_un, "sp": s:light_green})
-  call s:h("SpellRare",   {"gui": s:sp_un, "sp": s:pink})
-  call s:h("SpellLocal",  {"gui": s:sp_un, "sp": s:dark_green})
+  call s:h("SpellBad",   {"gui": s:sp_un, "sp": s:red})
+  call s:h("SpellCap",	 {"gui": s:sp_un, "sp": s:light_green})
+  call s:h("SpellRare",  {"gui": s:sp_un, "sp": s:pink})
+  call s:h("SpellLocal", {"gui": s:sp_un, "sp": s:dark_green})
 else
-  call s:h("SpellBad",	  {"cterm": s:sp_un, "fg": s:red})
-  call s:h("SpellCap",	  {"cterm": s:sp_un, "fg": s:light_green})
-  call s:h("SpellRare",   {"cterm": s:sp_un, "fg": s:pink})
-  call s:h("SpellLocal",  {"cterm": s:sp_un, "fg": s:dark_green})
+  call s:h("SpellBad",   {"cterm": s:sp_un, "fg": s:red})
+  call s:h("SpellCap",	 {"cterm": s:sp_un, "fg": s:light_green})
+  call s:h("SpellRare",  {"cterm": s:sp_un, "fg": s:pink})
+  call s:h("SpellLocal", {"cterm": s:sp_un, "fg": s:dark_green})
 endif
-call s:h("Pmenu",		  {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuSel",	  {"fg": s:norm, "bg": s:blue})
-call s:h("PmenuSbar",	  {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuThumb",	  {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("TabLine",		  {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("TabLineSel",	  {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
+call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
+call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
+call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
+call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
+call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
-call s:h("CursorLine",	  {"bg": s:bg_very_subtle})
+call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 " remainder of syntax highlighting
-call s:h("MatchParen",	  {"bg": s:bg_subtle, "fg": s:norm})
-call s:h("qfLineNr",	  {"fg": s:medium_gray})
+call s:h("MatchParen",  {"bg": s:bg_subtle, "fg": s:norm})
+call s:h("qfLineNr",    {"fg": s:medium_gray})
 
 " hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
 
@@ -281,16 +281,16 @@ hi! link htmlTagName	  KeyWord
 hi! link htmlTagN		  Keyword
 
 " HTML content
-call s:h("htmlH1",		  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"	 })
-call s:h("htmlH2",		  {"fg": s:head_a, "gui": "bold"	   , "cterm": "bold"	 })
-call s:h("htmlH3",		  {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic"	 })
-call s:h("htmlH4",		  {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic"	 })
-call s:h("htmlH5",		  {"fg": s:head_c											 })
-call s:h("htmlH6",		  {"fg": s:head_c											 })
-call s:h("htmlLink",	  {"fg": s:blue  , "gui": "underline"  , "cterm": "underline"})
-call s:h("htmlItalic",	  {				   "gui": "italic"	   , "cterm": "italic"	 })
-call s:h("htmlBold",	  {				   "gui": "bold"	   , "cterm": "bold"	 })
-call s:h("htmlBoldItalic",{				   "gui": "bold,italic", "cterm": "bold"	 })
+call s:h("htmlH1",		  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"   })
+call s:h("htmlH2",		  {"fg": s:head_a, "gui": "bold"	   , "cterm": "bold"   })
+call s:h("htmlH3",		  {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic" })
+call s:h("htmlH4",		  {"fg": s:head_b, "gui": "italic"	   , "cterm": "italic" })
+call s:h("htmlH5",		  {"fg": s:head_c                                          })
+call s:h("htmlH6",		  {"fg": s:head_c                                          })
+call s:h("htmlLink",	  {"fg": s:blue , "gui": "underline", "cterm": "underline" })
+call s:h("htmlItalic",	  {"gui": "italic", "cterm": "italic"	                   })
+call s:h("htmlBold",	  {"gui": "bold", "cterm": "bold"                          })
+call s:h("htmlBoldItalic",{"gui": "bold,italic", "cterm": "bold"                   })
 " hi htmlString		guifg=#87875f guibg=NONE gui=NONE		 ctermfg=101 ctermbg=NONE cterm=NONE
 
 " tpope/vim-markdown
