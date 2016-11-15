@@ -104,7 +104,7 @@ let s:yellow		  = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow	  = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
-  let s:bg				= s:black
+  let s:bg              = s:black
   let s:bg_subtle		= s:light_black
   let s:bg_very_subtle	= s:subtle_black
   let s:norm			= s:lighter_gray
