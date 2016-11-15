@@ -156,12 +156,12 @@ function! s:h(group, style)
     unlet a:style.cterm
   endif
   execute "highlight" a:group
-    \ "guifg="   (has_key(a:style, "fg")	? a:style.fg.gui   : "NONE")
-    \ "guibg="   (has_key(a:style, "bg")	? a:style.bg.gui   : "NONE")
-    \ "guisp="   (has_key(a:style, "sp")	? a:style.sp.gui   : "NONE")
-    \ "gui="     (has_key(a:style, "gui")	? a:style.gui	   : "NONE")
-    \ "ctermfg=" (has_key(a:style, "fg")	? a:style.fg.cterm : "NONE")
-    \ "ctermbg=" (has_key(a:style, "bg")	? a:style.bg.cterm : "NONE")
+    \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
+    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
+    \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
+    \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
+    \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
+    \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
@@ -360,8 +360,8 @@ call s:h("mmdTableCaption",             {"fg": s:norm})
 
 " Textile content
 " https://github.com/timcharper/textile.vim/blob/master/syntax/textile.vim
-"call s:h("txtBold",				{"fg": s:norm  , "gui": "bold"		 , "cterm": "bold"	})
-"call s:h("txtEmphasis",			{"fg": s:norm  , "gui": "italic"	 , "cterm": "italic"})
+"call s:h("txtBold",     {"fg": s:norm  , "gui": "bold",        "cterm": "bold"   })
+"call s:h("txtEmphasis", {"fg": s:norm  , "gui": "italic",      "cterm": "italic" })
 
 " XML content
 hi! link xmlTag                    htmlTag
