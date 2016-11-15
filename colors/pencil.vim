@@ -5,29 +5,29 @@
 " License:	  The MIT License (MIT)
 
 " Original iA Writer colors, to use as a guide
-" White			  #F1F1F1
-" OffWhiteIPad	  #F5F2EC
-" OffWhiteDemo	  #F9F8F4
-" Cursor		  #20BBFC
-" Selection		  #B6D6FD
-" SelectionNOS	  #D4D4D4
-" StatusBar		  #EDEDED
-" StatusBarBorder #D9D9D9	used for search too
-" Text			  #424242
-" Blue			  #B5D6FD
-" Green			  #30C798
-" Blue2			  #1DAEE4
-" gray			  #999999
-" Red			  #E32791
-" UnfocusedText   #B8B8B8
-" MenuSelected	  #2C81FB
-" MenuUnSelected  #545454
-" MenuText		  #F1F1F1
-" LightKeyBg	  #4B4B4B
-" DarkKeyBg		  #262626
-" NearBlack		  #181818
-" SyntaxButton	  #363738
-" SearchHighlight #F3E430  yellow
+" White				#F1F1F1
+" OffWhiteIPad		#F5F2EC
+" OffWhiteDemo		#F9F8F4
+" Cursor			#20BBFC
+" Selection			#B6D6FD
+" SelectionNOS		#D4D4D4
+" StatusBar			#EDEDED
+" StatusBarBorder	#D9D9D9	used for search too
+" Text				#424242
+" Blue				#B5D6FD
+" Green				#30C798
+" Blue2				#1DAEE4
+" gray				#999999
+" Red				#E32791
+" UnfocusedText		#B8B8B8
+" MenuSelected		#2C81FB
+" MenuUnSelected	#545454
+" MenuText			#F1F1F1
+" LightKeyBg		#4B4B4B
+" DarkKeyBg			#262626
+" NearBlack			#181818
+" SyntaxButton		#363738
+" SearchHighlight	#F3E430  yellow
 
 hi clear
 
