@@ -386,3 +386,6 @@ else
   hi link GitGutterChange          LineNr
   hi link GitGutterChangeDelete    LineNr
 endif
+
+" Pmenu
+call s:h("Pmenu", {"fg": s:blue, "bg": s:black})
