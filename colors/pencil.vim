@@ -69,7 +69,7 @@ let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
-
+let s:dark_gray       = { "gui": "#262626", "cterm": "235" }
 if g:pencil_higher_contrast_ui == 0
   " darker shadow and whiter grays
   let s:subtle_black  = { "gui": "#262626", "cterm": "235" }
@@ -388,7 +388,7 @@ else
 endif
 
 " Pmenu
-call s:h("Pmenu",      {"fg": s:blue,   "bg": s:subtle_black })
+call s:h("Pmenu",      {"fg": s:blue,   "bg": s:dark_gray    })
 call s:h("PmenuSel",   {"fg": s:purple, "bg": s:subtle_black })
 call s:h("PmenuSbar",  {"fg": s:purple                       })
 call s:h("PmenuThumb", {"fg": s:green,                       })
