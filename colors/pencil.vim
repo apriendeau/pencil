@@ -388,9 +388,9 @@ else
 endif
 
 " Pmenu
-call s:h("Pmenu",      {"fg": s:blue,   "bg": s:medium_gray })
-call s:h("PmenuSel",   {"fg": s:purple, "bg": s:medium_gray })
-call s:h("PmenuSbar",  {"fg": s:purple               })
-call s:h("PmenuThumb", {"fg": s:green,               })
+call s:h("Pmenu",      {"fg": s:blue,   "bg": s:subtle_black })
+call s:h("PmenuSel",   {"fg": s:purple, "bg": s:subtle_black })
+call s:h("PmenuSbar",  {"fg": s:purple                       })
+call s:h("PmenuThumb", {"fg": s:green,                       })
 
 
