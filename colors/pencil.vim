@@ -10,7 +10,7 @@
 " OffWhiteDemo    #F9F8F4
 " Cursor          #20BBFC
 " Selection       #B6D6FD
-" SelectionNOS		#D4D4D4
+" SelectionNOS    #D4D4D4
 " StatusBar       #EDEDED
 " StatusBarBorder #D9D9D9	used for search too
 " Text            #424242
