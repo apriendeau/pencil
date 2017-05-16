@@ -5,27 +5,27 @@
 " License:	  The MIT License (MIT)
 
 " Original iA Writer colors, to use as a guide
-" White				#F1F1F1
+" White				    #F1F1F1
 " OffWhiteIPad		#F5F2EC
 " OffWhiteDemo		#F9F8F4
-" Cursor			#20BBFC
-" Selection			#B6D6FD
+" Cursor			    #20BBFC
+" Selection			  #B6D6FD
 " SelectionNOS		#D4D4D4
-" StatusBar			#EDEDED
+" StatusBar			  #EDEDED
 " StatusBarBorder	#D9D9D9	used for search too
-" Text				#424242
-" Blue				#B5D6FD
-" Green				#30C798
-" Blue2				#1DAEE4
-" gray				#999999
-" Red				#E32791
+" Text				    #424242
+" Blue				    #B5D6FD
+" Green				    #30C798
+" Blue2				    #1DAEE4
+" gray				    #999999
+" Red				      #E32791
 " UnfocusedText		#B8B8B8
 " MenuSelected		#2C81FB
 " MenuUnSelected	#545454
-" MenuText			#F1F1F1
-" LightKeyBg		#4B4B4B
-" DarkKeyBg			#262626
-" NearBlack			#181818
+" MenuText			  #F1F1F1
+" LightKeyBg		  #4B4B4B
+" DarkKeyBg			  #262626
+" NearBlack			  #181818
 " SyntaxButton		#363738
 " SearchHighlight	#F3E430  yellow
 
@@ -106,7 +106,7 @@ let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
   let s:bg              = s:black
-  let s:bg_subtle       = s:light_black
+  let s:bg_subtle       = s:dark_gray
   let s:bg_very_subtle	= s:subtle_black
   let s:norm            = s:lighter_gray
   let s:norm_subtle     = s:light_gray
